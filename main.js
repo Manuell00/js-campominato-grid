@@ -34,6 +34,7 @@ button.addEventListener("click",
             square.addEventListener("click",
                 function () {
                     this.classList.add("clicked-true")
+                    console.log(`È stata colorata la cella numero  ${mioArray[i]}`)
                 }
             );
 
