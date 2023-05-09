@@ -54,13 +54,34 @@ main{
     background-color: aquamarine;
 }
 
+#cell-container{
+    height: calc(100vh - 150px)
+}
+
+.square{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: calc(100% / 10);
+    height: 50px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.square.clicked-true{
+    background-color: green;
+}
+
 
 /* FOOTER */
 footer{
+    text-align: center;
     background-color: grey;
     height: 50px;
     width: 100%;
+    display: flex;
+    align-items: center;
     position: absolute;
-    top: calc(100vh - 50px);
-
+    top: calc(100vh - 50px)
 }
