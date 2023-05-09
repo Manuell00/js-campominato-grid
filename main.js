@@ -29,6 +29,14 @@ button.addEventListener("click",
             newSpan.append(mioArray[i]);
             square.append(newSpan)
 
+
+            // Associarel'evento allo square
+            square.addEventListener("click",
+                function () {
+                    this.classList.add("clicked-true")
+                }
+            );
+
             gridElement.append(square)
         }
 
@@ -37,12 +45,6 @@ button.addEventListener("click",
 
 
 
-// // Associarel'evento allo square
-// square.addEventListener("click",
-//     function () {
-//         this.classList.add("clicked-true")
-//     }
-// );
 
 
 

@@ -65,7 +65,7 @@ main{
     float: left;
     width: calc(100% / 10);
     height: 50px;
-    border: 2px solid black;
+    border: 1px solid black;
     cursor: pointer;
 }
 
