@@ -16,8 +16,23 @@ let mioArray = createOrderArray(1, 101)
 
 
 button.addEventListener("click",
-// Creo la i quadrati all'interno della grid
-    generateSquare()
+    // Creo la i quadrati all'interno della grid
+    // Creo una funzione che generi gli square
+    function generateSquare() {
+        for (let i = 0; i < mioArray.length; i++) {
+
+            // Utilizzo la funzione CreateGridSquare per creare il blocco square
+            const square = createGridSquare("div", "square")
+
+            // Creo degli span che andrà in square con all'interno un numero di arrayNum
+            const newSpan = document.createElement("span")
+            newSpan.append(mioArray[i]);
+            square.append(newSpan)
+
+            gridElement.append(square)
+        }
+
+    }
 )
 
 
@@ -56,19 +71,3 @@ function createOrderArray(min, max) {
     return intArr;
 }
 
-// Creo una funzione che generi gli square
-function generateSquare() {
-    for (let i = 0; i < mioArray.length; i++) {
-
-        // Utilizzo la funzione CreateGridSquare per creare il blocco square
-        const square = createGridSquare("div", "square")
-    
-        // Creo degli span che andrà in square con all'interno un numero di arrayNum
-        const newSpan = document.createElement("span")
-        newSpan.append(mioArray[i]);
-        square.append(newSpan)
-
-        gridElement.append(square)
-    }
-       
-}
