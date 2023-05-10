@@ -44,8 +44,16 @@ function createOrderArray(min, max) {
 
 // Creo la funzione per generare i quadrati
 function generateSquare() {
+
     difficult = document.getElementById("difficultButton").value
-    if (difficult === "easy") {
+
+    // Inserisco la casistica in cui non sia scelta la difficoltà
+    if (difficult === "Nan") {
+        alert("Attento non hai scelto la difficoltà")
+    }
+
+    // Inserisco la casistica per cui il gioco sia "easy"
+    else if (difficult === "easy") {
 
         for (let i = 0; i < mioArray.length; i++) {
 
@@ -71,7 +79,7 @@ function generateSquare() {
 
     }
 
-
+    // Inserisco la casistica per cui il gioco sia "medium"
     else if (difficult === "medium") {
 
         for (let i = 0; i < mioArray.length; i++) {
@@ -98,7 +106,7 @@ function generateSquare() {
 
     }
 
-
+    // Inserisco la casistica per cui il gioco sia "hard"
     else {
 
         for (let i = 0; i < mioArray.length; i++) {
