@@ -91,7 +91,13 @@ main{
     cursor: pointer;
 }
 
-.square.clicked-true{
+.square-easy.clicked-true{
+    background-color: dodgerblue;
+}
+.square-medium.clicked-true{
+    background-color: dodgerblue;
+}
+.square-difficult.clicked-true{
     background-color: dodgerblue;
 }
 
