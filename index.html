@@ -46,8 +46,15 @@
                     </div>
 
                     <!-- Button Play -->
-                    <div class="col-md-2" id="colButton">
-                        <button type="button" class="btn btn-secondary col-md-6" id="playButton">Play</button>
+                    <div class="col-md-4" id="colButton">
+                        <select class="form-select w-50" id="difficultButton">
+                            <option selected>Choose the difficult</option>
+                            <option value="hard">Hard</option>
+                            <option value="medium">Medium</option>
+                            <option value="easy">Easy</option>
+                        </select>
+
+                        <button type="button" class="btn btn-secondary col-md-4" id="playButton">Play</button>
                     </div>
                 </div>
             </div>
@@ -57,9 +64,9 @@
 
     <!-- MAIN -->
     <main>
-        <div class="container-fluid" >
+        <div class="container-fluid">
             <div class="row justify-content-center align-items-center" id="cell-container">
-                <div class="col-6"id="grid">
+                <div class="col-6" id="grid">
 
                 </div>
             </div>

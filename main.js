@@ -12,42 +12,9 @@ const gridElement = document.getElementById("grid")
 const button = document.getElementById("playButton")
 let mioArray = createOrderArray(1, 101)
 
-
-
-
-button.addEventListener("click",
-    // Creo la i quadrati all'interno della grid
-    // Creo una funzione che generi gli square
-    function generateSquare() {
-        for (let i = 0; i < mioArray.length; i++) {
-
-            // Utilizzo la funzione CreateGridSquare per creare il blocco square
-            const square = createGridSquare("div", "square")
-
-            // Creo degli span che andrà in square con all'interno un numero di arrayNum
-            const newSpan = document.createElement("span")
-            newSpan.append(mioArray[i]);
-            square.append(newSpan)
-
-
-            // Associarel'evento allo square
-            square.addEventListener("click",
-                function () {
-                    this.classList.add("clicked-true")
-                    console.log(`È stata colorata la cella numero  ${mioArray[i]}`)
-                }
-            );
-
-            gridElement.append(square)
-        }
-
-    }
-)
-
-
-
-
-
+button.addEventListener("click", clearBox)
+button.addEventListener("click", chooseDifficult)
+button.addEventListener("click", generateSquare)
 
 
 
@@ -73,4 +40,119 @@ function createOrderArray(min, max) {
 
     return intArr;
 }
+
+
+// Creo la funzione per generare i quadrati
+function generateSquare() {
+    difficult = document.getElementById("difficultButton").value
+    if (difficult === "easy") {
+
+        for (let i = 0; i < mioArray.length; i++) {
+
+            // Utilizzo la funzione CreateGridSquare per creare il blocco square
+            let square = createGridSquare("div", "square-easy")
+
+            // Creo degli span che andrà in square con all'interno un numero di arrayNum
+            const newSpan = document.createElement("span")
+            newSpan.append(mioArray[i]);
+            square.append(newSpan)
+
+
+            // Associarel'evento allo square
+            square.addEventListener("click",
+                function () {
+                    this.classList.add("clicked-true")
+                    console.log(`È stata colorata la cella numero  ${mioArray[i]}`)
+                }
+            );
+
+            gridElement.append(square)
+        }
+
+    }
+
+
+    else if (difficult === "medium") {
+
+        for (let i = 0; i < mioArray.length; i++) {
+
+            // Utilizzo la funzione CreateGridSquare per creare il blocco square
+            let square = createGridSquare("div", "square-medium")
+
+            // Creo degli span che andrà in square con all'interno un numero di arrayNum
+            const newSpan = document.createElement("span")
+            newSpan.append(mioArray[i]);
+            square.append(newSpan)
+
+
+            // Associarel'evento allo square
+            square.addEventListener("click",
+                function () {
+                    this.classList.add("clicked-true")
+                    console.log(`È stata colorata la cella numero  ${mioArray[i]}`)
+                }
+            );
+
+            gridElement.append(square)
+        }
+
+    }
+
+
+    else {
+
+        for (let i = 0; i < mioArray.length; i++) {
+
+            // Utilizzo la funzione CreateGridSquare per creare il blocco square
+            let square = createGridSquare("div", "square-hard")
+
+            // Creo degli span che andrà in square con all'interno un numero di arrayNum
+            const newSpan = document.createElement("span")
+            newSpan.append(mioArray[i]);
+            square.append(newSpan)
+
+
+            // Associarel'evento allo square
+            square.addEventListener("click",
+                function () {
+                    this.classList.add("clicked-true")
+                    console.log(`È stata colorata la cella numero  ${mioArray[i]}`)
+                }
+            );
+
+            gridElement.append(square)
+        }
+
+    }
+
+
+}
+
+// Utilizzo una funzione chooseDifficult per selezionare la difficoltà e quindi la lunghezza dell'array
+function chooseDifficult() {
+    difficult = document.getElementById("difficultButton").value
+
+
+    if (difficult === "easy") {
+        mioArray = createOrderArray(1, 50)
+    }
+
+    else if (difficult === "medium") {
+        mioArray = createOrderArray(1, 82)
+    }
+
+    else {
+        mioArray = createOrderArray(1, 101)
+    }
+    console.log(difficult)
+}
+
+
+// Creo una funzione per pulire il container
+
+function clearBox()
+{
+    document.getElementById("grid").innerHTML = "";
+}
+
 

@@ -58,7 +58,29 @@ main{
     height: calc(100vh - 150px)
 }
 
-.square{
+.square-easy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: calc(100% / 7);
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.square-medium{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: calc(100% / 9);
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.square-hard{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,6 +93,11 @@ main{
 
 .square.clicked-true{
     background-color: dodgerblue;
+}
+
+#colButton{
+    display: flex;
+    justify-content: space-between;
 }
 
 
